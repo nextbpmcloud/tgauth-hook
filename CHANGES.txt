@@ -1,0 +1,19 @@
+6.1.2.13  15-03-2018
+--------------------
+* Cambiar expresion regular para páginas protegidas para que permita diferentes "Sites", es decir: [/idioma][/web/<sitename>]/ov...
+
+6.1.2.12  02-11-2018
+--------------------
+
+* Permitir redirigir directamente al SSO mediante filtro: ?auth_level=sso . En este caso se puede indicar &as=<nº fuente> si hubiese varios SSO definidos.
+* Ahora se puede indicar nivel de auth por certificado con ?auth_level=cert.
+
+6.1.2.11  21-06-2018
+--------------------
+
+* 7216: Funcionalidad para poder pintar las login en el portal.
+
+6.1.2.4  20-10-2016
+--------------------
+
+* Asegurar que los datos se lean desde la salida del comando de validacion de certificado en UTF-8.

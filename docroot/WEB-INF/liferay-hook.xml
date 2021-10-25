@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hook PUBLIC "-//Liferay//DTD Hook 6.1.0//EN" "http://www.liferay.com/dtd/liferay-hook_6_1_0.dtd">
+
+<hook>
+	<portal-properties>portal.properties</portal-properties>
+	<language-properties>content/Language_es.properties</language-properties>
+	<language-properties>content/Language.properties</language-properties>
+	<servlet-filter>
+		<servlet-filter-name>Tangram Authentication</servlet-filter-name>
+		<servlet-filter-impl>es.tangrambpm.liferay.AuthenticationFilter</servlet-filter-impl>
+	</servlet-filter>
+	<servlet-filter-mapping>
+		<servlet-filter-name>Tangram Authentication</servlet-filter-name>
+		<before-filter>SSO Open SSO Filter</before-filter>
+		<url-pattern>/*</url-pattern>
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>FORWARD</dispatcher>
+	</servlet-filter-mapping>
+	<struts-action>
+    	<struts-action-path>/portal/sso-login</struts-action-path>
+    	<struts-action-impl>es.tangrambpm.liferay.AuthenticationAction</struts-action-impl>
+	</struts-action>
+	<struts-action>
+    	<struts-action-path>/portal/cert-login</struts-action-path>
+    	<struts-action-impl>es.tangrambpm.liferay.AuthenticationAction</struts-action-impl>
+	</struts-action>
+</hook>
